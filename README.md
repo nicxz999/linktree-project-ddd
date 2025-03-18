@@ -24,7 +24,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 - [X]  O cliente deve poder cadastrar uma organização; (Necessário 1 para operar no sistema)
 - [X]  O cliente deve poder editar uma organização;
 - [X]  O cliente deve poder editar o SLUG da organização para um slug personalizado;
-- [ ]  O cliente deve poder deletar uma organização;
+- [X]  O cliente deve poder deletar uma organização;
 - [ ]  O cliente deve poder visualizar suas organizações;
 
 **_CRUD COLEÇÕES_**

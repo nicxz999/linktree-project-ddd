@@ -36,4 +36,10 @@ export class InMemoryOrganizationsRepository
 
         return organization
     }
+
+    async delete(organizationId: string): Promise<void> {
+        const index = this.items.findIndex(item => item.id.toValue() === organizationId)!
+
+        this.items.splice(index, 1)
+    }
 }

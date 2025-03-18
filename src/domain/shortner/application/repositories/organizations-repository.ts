@@ -6,4 +6,5 @@ export interface OrganizationsRepository {
     findById(organizationId: string): Promise<Organization | null>
     updateSlug(slug: Slug, organizationId: string): Promise<void>
     findBySlug(slug: string | Slug): Promise<Organization | null>
+    delete(organizationId: string): Promise<void>
 }

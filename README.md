@@ -21,7 +21,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 
 **_CRUD ORGANIZAÇÕES_**
 
-- [ ]  O cliente deve poder cadastrar uma organização; (Necessário 1 para operar no sistema)
+- [X]  O cliente deve poder cadastrar uma organização; (Necessário 1 para operar no sistema)
 - [ ]  O cliente deve poder editar uma organização;
 - [ ]  O cliente deve poder deletar uma organização;
 - [ ]  O cliente deve poder visualizar suas organizações;
@@ -43,6 +43,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 ## RN's (Regras de negócio)
 
 - [ ]  O cliente é único por e-mail;
+- [ ]  O cliente pode escolher colocar uma coleção em uma organização ou não, caso ele não coloque o status será INACTIVE;
 - [ ]  O cliente deve poder escolher se uma coleção é global ou não; (Pode ser usada em 1 ou mais organizações)
 - [ ]  O cliente só pode criar links se ele tiver uma coleção cadastrada anteriormente;
 - [ ]  O slug pode ser aleatório ou baseado no título da organização;

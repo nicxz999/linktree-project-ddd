@@ -81,8 +81,12 @@ export class Organization extends Entity<OrganizationProps> {
         this.touch()
     }
 
-    set slug(text: string) {
-        this.props.slug = Slug.createFromText(text)
+    set slug(text: string | Slug) {
+        if(text instanceof Slug) {
+            this.props.slug = text
+        } else {
+            this.props.slug = Slug.createFromText(text)
+        }
         this.touch()
     }
 
@@ -113,7 +117,7 @@ export class Organization extends Entity<OrganizationProps> {
     ) {
         const organization = new Organization({
             ...props,
-            slug: Slug.createFromText(props.name),
+            slug: props.slug ?? Slug.createFromText(props.name),
             pictureUrl: props.pictureUrl ?? 'https://avatar.iran.liara.run/public/job/operator/male',
             status: props.collectionId ? 'ACTIVE' : 'INACTIVE',
             collectionId: props.collectionId ?? undefined,

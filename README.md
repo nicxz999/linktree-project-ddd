@@ -16,7 +16,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 **_CRUD CLIENTES_**
 
 - [X]  O cliente deve poder se cadastrar;
-- [ ]  O cliente deve poder editar seu cadastro;
+- [X]  O cliente deve poder editar seu cadastro;
 - [X]  O cliente deve poder visualizar seu perfil;
 
 **_CRUD ORGANIZAÇÕES_**
@@ -25,7 +25,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 - [X]  O cliente deve poder editar uma organização;
 - [X]  O cliente deve poder editar o SLUG da organização para um slug personalizado;
 - [X]  O cliente deve poder deletar uma organização;
-- [ ]  O cliente deve poder visualizar suas organizações;
+- [X]  O cliente deve poder visualizar suas organizações;
 
 **_CRUD COLEÇÕES_**
 

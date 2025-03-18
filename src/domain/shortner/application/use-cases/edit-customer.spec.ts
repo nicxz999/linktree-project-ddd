@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker'
 import { EditCustomerUseCase } from './edit-customer'
 import { InMemoryCustomersRepository } from 'test/repositories/in-memory-customers-repository'
 import { makeCustomer } from 'test/factories/make-customer'

@@ -42,4 +42,10 @@ export class InMemoryOrganizationsRepository
 
         this.items.splice(index, 1)
     }
+
+    async fetchByCustomerId(customerId: string) {
+        const organizations = this.items.filter(item => item.customerId.toValue() == customerId)
+
+        return organizations
+    }
 }

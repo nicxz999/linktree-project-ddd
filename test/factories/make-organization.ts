@@ -6,13 +6,14 @@ import { faker } from '@faker-js/faker'
 interface makeCustomerProps {
     collectionId?: string
     slug?: string
+    customerId?: string
 }
 
 export async function makeOrganization(props?: makeCustomerProps) {
     const organization = Organization.create({
         name: faker.company.name(),
         biography: faker.lorem.text(),
-        customerId: new UniqueEntityId(),
+        customerId: props?.customerId ? new UniqueEntityId(props.customerId) : new UniqueEntityId(),
         collectionId: props?.collectionId ? new UniqueEntityId(props.collectionId) : undefined,
         slug: props?.slug ? Slug.createFromText(props?.slug) : undefined
     })

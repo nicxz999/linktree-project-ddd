@@ -1,4 +1,5 @@
 import { Customer } from '../../enterprise/entities/Customer'
+import { CustomerAlreadyExistsError } from '../errors/customer-already-exists-error'
 import { CustomersRepository } from '../repositories/customers-repository'
 import { hash } from 'bcryptjs'
 
@@ -24,7 +25,7 @@ export class RegisterCustomerUseCase {
             await this.customersRepository.findByEmail(email)
 
         if (customerAlreadyExists) {
-            throw new Error()
+            throw new CustomerAlreadyExistsError()
         }
 
         const passwordHash = await hash(password, 8)

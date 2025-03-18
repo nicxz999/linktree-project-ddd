@@ -3,6 +3,7 @@ import { RegisterCustomerUseCase } from './register-customer'
 import { faker } from '@faker-js/faker'
 import { compare } from 'bcryptjs'
 import { makeCustomer } from 'test/factories/make-customer'
+import { CustomerAlreadyExistsError } from '../errors/customer-already-exists-error'
 
 let inMemoryCustomersRepository: InMemoryCustomersRepository
 let sut: RegisterCustomerUseCase
@@ -49,6 +50,6 @@ describe('Create Customer Use Case', () => {
                 email: customer.email,
                 password: '123456',
             })
-        ).rejects.toBeInstanceOf(Error)
+        ).rejects.toBeInstanceOf(CustomerAlreadyExistsError)
     })
 })

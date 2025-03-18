@@ -17,4 +17,14 @@ export class InMemoryCustomersRepository implements CustomersRepository {
 
         return customer
     }
+
+    async findById(customerId: string) {
+        const customer = this.items.find(item => item.id.toValue() === customerId)
+        
+        if(!customer) {
+            return null
+        }
+
+        return customer
+    }
 }

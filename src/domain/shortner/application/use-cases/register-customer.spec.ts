@@ -41,8 +41,6 @@ describe('Create Customer Use Case', () => {
     it('should not be able to register a customer with email twice', async () => {
         const customer = await makeCustomer()
 
-        console.log(customer)
-
         inMemoryCustomersRepository.create(customer)
 
         await expect(() =>

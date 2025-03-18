@@ -27,4 +27,12 @@ export class InMemoryCustomersRepository implements CustomersRepository {
 
         return customer
     }
+
+    async updateCustomer(username: string, customerId: string) {
+        const customer = this.items.find(item => item.id.toValue() === customerId)!
+
+        customer.username = username
+
+        return customer
+    }
 }

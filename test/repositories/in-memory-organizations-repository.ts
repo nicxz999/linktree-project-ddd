@@ -37,7 +37,7 @@ export class InMemoryOrganizationsRepository
         return organization
     }
 
-    async delete(organizationId: string): Promise<void> {
+    async delete(organizationId: string) {
         const index = this.items.findIndex(item => item.id.toValue() === organizationId)!
 
         this.items.splice(index, 1)
@@ -47,5 +47,13 @@ export class InMemoryOrganizationsRepository
         const organizations = this.items.filter(item => item.customerId.toValue() == customerId)
 
         return organizations
+    }
+
+    async update(organization: Organization, organizationId: string) {
+        let selectedOrganization = this.items.find(item => item.id.toValue() === organizationId)!
+
+        selectedOrganization = organization
+
+        return selectedOrganization
     }
 }

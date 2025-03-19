@@ -29,8 +29,8 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 
 **_CRUD COLEÇÕES_**
 
-- [ ]  O cliente deve poder criar uma coleção;
-- [ ]  O cliente deve poder deletar uma coleção;
+- [X]  O cliente deve poder criar uma coleção;
+- [X]  O cliente deve poder deletar uma coleção;
 - [ ]  O cliente deve poder editar uma coleção;
 - [ ]  O cliente deve poder visualizar suas coleções;
 
@@ -45,8 +45,7 @@ Aplicação estilo [LinkTree](https://linktr.ee) para estudo de projeto usando D
 
 - [X]  O cliente é único por e-mail;
 - [X]  O slug é único por organização;
-- [ ]  O cliente pode escolher colocar uma coleção em uma organização ou não, caso ele não coloque o status será INACTIVE;
-- [ ]  O cliente deve poder escolher se uma coleção é global ou não; (Pode ser usada em 1 ou mais organizações)
+- [X]  O cliente pode escolher colocar uma coleção em uma organização ou não, caso ele não coloque o status será INACTIVE;
 - [ ]  O cliente só pode criar links se ele tiver uma coleção cadastrada anteriormente;
 - [ ]  O slug pode ser aleatório ou baseado no título da organização;
 

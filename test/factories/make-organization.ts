@@ -3,13 +3,13 @@ import { Organization } from '@/domain/shortner/enterprise/entities/Organization
 import { Slug } from '@/domain/shortner/enterprise/entities/value-objects/slug'
 import { faker } from '@faker-js/faker'
 
-interface makeCustomerProps {
+interface makeOrganizationProps {
     collectionId?: string
     slug?: string
     customerId?: string
 }
 
-export async function makeOrganization(props?: makeCustomerProps) {
+export async function makeOrganization(props?: makeOrganizationProps) {
     const organization = Organization.create({
         name: faker.company.name(),
         biography: faker.lorem.text(),

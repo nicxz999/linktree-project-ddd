@@ -7,4 +7,20 @@ export class InMemoryCollectionsRepository implements CollectionsRepository {
     async create(collection: Collection) {
         this.items.push(collection)
     }
+
+    async findById(collectionId: string) {
+        const collection = this.items.find(item => item.id.toValue() === collectionId)
+
+        if(!collection) {
+            return null
+        }
+
+        return collection
+    }
+
+    async delete(collectionId: string) {
+        const index = this.items.findIndex(item => item.id.toValue() === collectionId)!
+
+        this.items.splice(index, 1)
+    }
 }
